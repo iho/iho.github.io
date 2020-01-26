@@ -23,12 +23,54 @@ html {
     html {
         font-size: 112%;
     }
+    
 }
+
+@media (max-width: 600px) {
+    .content {
+        border-radius: $roundness;
+    }
+    .join {
+        border-top-left-radius: $roundness;
+        border-top-right-radius: $roundness;
+    }
+    .subscription {
+
+    }
+    .why_us {
+        border-bottom-left-radius: $roundness;
+        border-bottom-right-radius: $roundness;
+    }
+  }
 
 /* Large screens (1024px) */
 @media (min-width: 64rem) {
     html {
         font-size: 120%;
+    }
+
+    .content {
+        border-radius: $roundness;
+
+        display: grid;
+        grid-template-columns: 50px 50px 50px 50px;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+
+        grid-template-areas:
+            "header header"
+            "footer-left footer-right"
+    }
+
+    .join {
+        border-top-left-radius: $roundness;
+        border-top-right-radius: $roundness;
+    }
+    .subscription {
+        border-bottom-left-radius: $roundness;
+    }
+    .why_us {
+        border-bottom-right-radius: $roundness;
     }
 }
 
@@ -52,23 +94,11 @@ html {
 }
 
 .content {
-    max-width: 50%;
-    box-shadow: 0 0 10px rgba(78, 10, 10, 0.37);
-    border-radius: $roundness;
-
-    display: grid;
-    grid-template-columns: 50px 50px 50px 50px;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr;
-
-    grid-template-areas:
-        "header header"
-        "footer-left footer-right"
+    max-width: 100%;
+    box-shadow: 0 0 10px rgba(78, 10, 10, 0.37);    
 }
 
 .join {
-    border-top-left-radius: $roundness;
-    border-top-right-radius: $roundness;
     grid-area: header;
     color: $grayish_blue;
     background-color: white;
@@ -85,7 +115,6 @@ html {
 }
 
 .subscription {
-    border-bottom-left-radius: $roundness;
     padding: 30px;
     grid-area: footer-left;
     color: white;
@@ -113,7 +142,6 @@ html {
 }
 
 .why_us {
-    border-bottom-right-radius: $roundness;
     color: white;
     background-color: lighten($color: $cyan, $amount: 10);
     padding: 30px;
