@@ -1,0 +1,96 @@
+$cyan: hsl(179, 62%, 43%);
+$bright_yellow: hsl(71, 73%, 54%);
+$light_gray: hsl(204, 43%, 93%);
+$grayish_blue: hsl(218, 22%, 67%);
+$roundness: 10px;
+
+body {
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    // color: white;
+    background-color: $light_gray;
+
+}
+
+.Aligner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    max-width: 50%;
+    box-shadow: 0 0 10px rgba(78, 10, 10, 0.37);
+    border-radius: $roundness;
+    
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px;
+    grid-template-rows: auto;
+    grid-template-columns: 2fr 1fr;
+
+    grid-template-areas:
+        "header header"
+        "footer-left footer-right"
+}
+
+.join {
+    border-top-left-radius: $roundness;
+    border-top-right-radius: $roundness;
+    grid-area: header;
+    color: $grayish_blue;
+    background-color: white;
+
+    h1 {
+        color: $cyan;
+    }
+
+    h2 {
+        color: $bright_yellow;
+    }
+    padding: 20px;
+}
+
+.subscription {
+    border-bottom-left-radius: $roundness;
+    padding: 30px;
+    grid-area: footer-left;
+    color: white;
+    background-color: $cyan;
+    display: flex;
+    flex-direction: column;
+    .price {
+        color: white;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+
+    button {
+        padding: 10px;
+        color: white;
+        background-color: $bright_yellow;
+        border-radius: 5px;
+        border: 0px solid;
+        box-shadow: 0 0 10px rgba(78, 10, 10, 0.37);
+        font-weight: 700;
+        font-size: 16px;
+    }
+}
+
+.why_us {
+    border-bottom-right-radius: $roundness;
+    color: white;
+    background-color: lighten($color: $cyan, $amount: 10);
+    padding: 30px;
+    grid-area: footer-right;
+    ul {
+        padding: 0px;
+        list-style: none;
+    }
+}
+
+// $variable: value 1;
+// .rule-1 {
+//   value: $variable;
+// }

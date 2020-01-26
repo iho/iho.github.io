@@ -1,0 +1,157 @@
+.container {
+    margin: 0 auto;
+    max-width: 48rem;
+    width: 90%;
+    background-color: white;
+    color: black;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+/* Medium screens (640px) */
+@media (min-width: 40rem) {
+    html {
+        font-size: 112%;
+    }
+}
+
+/* Large screens (1024px) */
+@media (min-width: 64rem) {
+    html {
+        font-size: 120%;
+    }
+}
+
+@media (min-width: 40rem) {
+    .column {
+        float: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .column.full {
+        width: 100%;
+    }
+
+    .column.two-thirds {
+        width: 66.7%;
+    }
+
+    .column.half {
+        width: 50%;
+    }
+
+    .column.third {
+        width: 33.3%;
+    }
+
+    .column.fourth {
+        width: 25%;
+    }
+
+    .column.flow-opposite {
+        float: right;
+    }
+}
+
+@media (min-width: 40rem) {
+    .column.flow-opposite {
+        float: right;
+    }
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+#search {
+    background: #2196f3;
+    color: white;
+    height: 100vh;
+
+    .icon-search {
+        position: absolute;
+        top: 10px;
+        left: 100px;
+        display: inline-block;
+    }
+
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+
+    .search-container {
+        flex: 1;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .big-title,
+    .title,
+    .inputs,
+    button {
+        flex: 1;
+    }
+
+    .big-title {
+        font-size: 1.5em;
+    }
+
+    .title {
+        font-size: 1em;
+    }
+
+    .inputs {
+        padding-top: 2em;
+        padding-bottom: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 60px;
+
+        input {
+            flex: 1;
+            padding: 10px;
+            
+            height: 60px;
+        }
+    }
+
+    button[type="submit"] {
+        background-color: #f57c00;
+        color: white;
+        padding: 0.6em;
+        border: 0px solid;
+        outline: none;
+        border-radius: 5px;
+        box-shadow: 0 1px 0 0 #d84d00, 0 2px 6px 0 rgba(0, 0, 0, .15)
+    }
+
+    button[type="submit"] hover {
+        background-color: #ffa353
+    }
+}
