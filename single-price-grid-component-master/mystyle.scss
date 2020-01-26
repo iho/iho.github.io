@@ -28,9 +28,12 @@ html {
 
 @media (max-width: 600px) {
     .content {
+        margin-top: 30px;
         border-radius: $roundness;
     }
     .join {
+        
+        margin-top: 30px;
         border-top-left-radius: $roundness;
         border-top-right-radius: $roundness;
     }
