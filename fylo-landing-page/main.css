@@ -71,7 +71,7 @@ button {
 }
 
 .line {
-  max-width: 90%;
+  max-width: 100%;
   -webkit-clip-path: ellipse(50% 69.26% at 50% 102.31%);
           clip-path: ellipse(50% 69.26% at 50% 102.31%);
   background-color: #f6f6fe;
@@ -290,6 +290,20 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  padding-bottom: 1rem;
+  padding-top: 0px;
+}
+
+.footer .columns .contacts {
+  margin-top: 1rem;
+}
+
+.footer .columns .icons {
+  margin-top: 1rem;
+}
+
+.footer .columns ul {
+  padding: 0px;
 }
 
 .footer .columns .column {
