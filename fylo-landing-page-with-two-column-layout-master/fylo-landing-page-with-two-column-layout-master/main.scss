@@ -1,0 +1,254 @@
+$very_dark_blue: hsl(243, 87%, 12%);
+$desaturated_blue: hsl(238, 22%, 44%);
+
+$bright_blue: hsl(224, 93%, 58);
+$moderate_cyan: hsl(170, 45%, 43%);
+$light_grayish_blue: hsl(240, 75%, 98%);
+$light_gray: hsl(0, 0%, 75%);
+
+$raleway: 'Raleway',
+sans-serif;
+$sans: 'Open Sans',
+sans-serif;
+$container-width: 90%;
+
+body {
+    font-family: $sans;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    max-width: $container-width;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+    .menu {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        margin-left: auto;
+        justify-content: space-between;
+
+        li {
+            padding-left: 4em;
+        }
+    }
+}
+
+h1,
+h2 {
+    font-family: $raleway;
+    font-weight: 700;
+}
+
+input {
+    width: 100%;
+    max-width: 20em;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+button {
+    padding: 10px;
+    padding-right: 80px;
+    padding-left: 80px;
+    margin-left: 40px;
+    background-color: $bright_blue;
+    color: white;
+    border: 0px;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.line {
+    max-width: $container-width;
+    clip-path: ellipse(50% 69.26% at 50.00% 102.31%);
+    background-color: $light_grayish_blue;
+    height: 200px;
+    width: 112%;
+}
+.files {
+    max-width: $container-width;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+    img {
+        display: block;
+        max-width: 30rem;
+    }
+
+    .email {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .leave_email {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-content: stretch;
+
+        
+    }
+}
+.productivity_wrapper{
+    background-color: $light_grayish_blue;
+}
+.productivity {
+    max-width: $container-width;
+    background-color: $light_grayish_blue;
+    display: flex;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+    a {
+        text-decoration: underline;
+        color: green;
+
+        img {
+            width: 1rem;
+            display: inline-block;
+            height: 1rem;
+            margin-left: auto;
+        }
+    }
+
+    img {
+        display: block;
+        width: 40%;
+        max-height: 600px;
+        max-width: 600px;
+    }
+
+    .quote_block {
+        .quote{
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+
+        }
+        .quotes_image {
+            padding-left: 1.5rem;
+            width: 1rem;
+            height: 1rem;
+        }
+
+        margin-top: 3rem;
+        font-size: 0.8rem;
+        padding-top: 1rem;
+        max-height: 50rem;
+        max-width: 15rem;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 10px 10px 29px 0px rgba(0, 0, 0, 0.75);
+
+        .author_block {
+            display: flex;
+            padding: 1rem;
+            img{
+                border-radius: 50%;
+                padding-right: 0.5rem;
+            }
+
+            .author_data {
+                display: flex;
+                flex-direction: column;
+                .name {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.early_access {
+    color: white;
+    background-color: $desaturated_blue;
+
+    
+
+    padding: 2rem;
+    padding-bottom: 5rem;
+    padding-top: 7rem;
+    display: flex;
+
+    .email .text{
+        width: 100%;
+    }
+    .text{
+        max-width: 40rem;
+        padding-right: 2rem;
+    }
+    .email{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        input{
+            min-width: 10rem;
+            width: 100%;
+        }
+    }
+    .get_started{
+        margin-top: 1rem;
+        margin-left: 0rem;
+        padding: 1rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+.footer{
+    color: white;
+    background-color: $very_dark_blue;
+
+    padding-bottom: 5rem;
+    padding-top: 100rem;
+
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    ul{
+        list-style: none;
+    }
+    .logo{
+        width: 200px;
+        padding: 2rem;
+    }
+    .contacts{
+        img{
+            padding-right: 1rem;
+        }
+    }
+    .columns{
+        display: flex;
+        flex-direction: row;
+        .column{
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+        }
+        li{
+            padding-bottom: 1rem;
+        }
+        img {
+            padding-left: 1.5rem;
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+   
+}
