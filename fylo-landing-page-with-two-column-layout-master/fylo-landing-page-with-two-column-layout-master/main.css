@@ -19,6 +19,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   max-width: 90%;
+  margin-top: 2rem;
   margin-left: 2rem;
   margin-right: 2rem;
 }

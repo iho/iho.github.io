@@ -26,8 +26,10 @@ body {
 .header {
     display: flex;
     max-width: $container-width;
+    margin-top: 2rem;
     margin-left: 2rem;
     margin-right: 2rem;
+    
 
     .menu {
         list-style: none;
@@ -179,8 +181,6 @@ button {
 .early_access {
     color: white;
     background-color: $desaturated_blue;
-
-    
 
     padding: 2rem;
     padding-bottom: 5rem;
