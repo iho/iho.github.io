@@ -47,7 +47,7 @@ a {
         justify-content: space-between;
 
         li {
-            padding-left: 4em;
+            padding-left: 3em;
         }
     }
 }
@@ -59,6 +59,7 @@ a {
             flex-direction: column;
 
             li {
+                padding: 5px;
                 padding-left: 0px;
             }
         }
