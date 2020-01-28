@@ -74,21 +74,25 @@ h2 {
 
 input {
     width: 100%;
-    max-width: 20em;
     color: black;
     outline-style: none;
     border: 1px solid black;
     border-radius: 5px;
     padding: 20px;
+    max-width: 90%;
     outline: none;
+}
+
+button {
+    outline-style: none;
 }
 
 input:active {}
 
 button {
     padding: 10px;
-    padding-right: 80px;
-    padding-left: 80px;
+    padding-right: 60px;
+    padding-left: 60px;
     margin-left: 40px;
     background-color: $bright_blue;
     color: white;
@@ -103,6 +107,12 @@ button {
     background-color: $light_grayish_blue;
     height: 200px;
     width: 112%;
+}
+
+@media (max-width: 900px) {
+    .line {
+        clip-path: ellipse(90% 69.26% at 50% 100.31%);
+    }
 }
 
 
@@ -137,12 +147,11 @@ button {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .files {
         .image {
             order: 1;
             float: left;
-            width: 90vw;
 
             img {
                 max-width: none;
@@ -153,12 +162,14 @@ button {
         flex-direction: column-reverse;
 
         .email {
-            width: 90%;
+            width: 100%;
             flex-direction: column;
             margin-bottom: 1rem;
 
             .leave_email {
                 flex-direction: column;
+                width: 100%;
+                margin: 0;
 
                 .get_started {
                     margin: 0;
@@ -167,9 +178,18 @@ button {
                 }
             }
 
-            button {
-                margin: 0;
+            input {
+                min-width: 10rem;
+                width: 100%;
             }
+
+            button {
+                min-width: 10rem;
+                width: 100%;
+            }
+
+            // button {//     margin: 0;
+            // }
         }
     }
 }
@@ -256,10 +276,15 @@ button {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .productivity {
         flex-direction: column-reverse;
-        .text_block{
+
+        .text_block {
+            max-width: 100%;
+        }
+
+        .quote_block {
             max-width: 100%;
         }
 
@@ -271,7 +296,7 @@ button {
                 max-width: 100%;
             }
         }
-    
+
     }
 }
 
@@ -299,7 +324,12 @@ button {
         align-items: flex-start;
 
         input {
-            // min-width: 10rem;
+            min-width: 10rem;
+            width: 100%;
+        }
+
+        button {
+            min-width: 10rem;
             width: 100%;
         }
     }
@@ -313,14 +343,14 @@ button {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
 
     .early_access {
         flex-direction: column;
 
         // display: block;
         .email {
-            width: 90%;
+            width: 100%;
 
             input {
                 // min-width: 10rem;
@@ -419,7 +449,7 @@ button {
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .footer {
         .columns {
             flex-direction: column;
@@ -435,4 +465,9 @@ button {
 
         }
     }
+}
+
+
+footer{
+    margin: 40px;
 }

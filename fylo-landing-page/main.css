@@ -71,19 +71,23 @@ h2 {
 
 input {
   width: 100%;
-  max-width: 20em;
   color: black;
   outline-style: none;
   border: 1px solid black;
   border-radius: 5px;
   padding: 20px;
+  max-width: 90%;
   outline: none;
 }
 
 button {
+  outline-style: none;
+}
+
+button {
   padding: 10px;
-  padding-right: 80px;
-  padding-left: 80px;
+  padding-right: 60px;
+  padding-left: 60px;
   margin-left: 40px;
   background-color: #3065f8;
   color: white;
@@ -99,6 +103,13 @@ button {
   background-color: #f6f6fe;
   height: 200px;
   width: 112%;
+}
+
+@media (max-width: 900px) {
+  .line {
+    -webkit-clip-path: ellipse(90% 69.26% at 50% 100.31%);
+            clip-path: ellipse(90% 69.26% at 50% 100.31%);
+  }
 }
 
 .files {
@@ -149,7 +160,7 @@ button {
       align-content: stretch;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .files {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -161,14 +172,13 @@ button {
         -ms-flex-order: 1;
             order: 1;
     float: left;
-    width: 90vw;
   }
   .files .image img {
     max-width: none;
     width: 80vw;
   }
   .files .email {
-    width: 90%;
+    width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -180,14 +190,21 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 100%;
+    margin: 0;
   }
   .files .email .leave_email .get_started {
     margin: 0;
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
+  .files .email input {
+    min-width: 10rem;
+    width: 100%;
+  }
   .files .email button {
-    margin: 0;
+    min-width: 10rem;
+    width: 100%;
   }
 }
 
@@ -282,7 +299,7 @@ button {
   font-weight: 700;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .productivity {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -290,6 +307,9 @@ button {
             flex-direction: column-reverse;
   }
   .productivity .text_block {
+    max-width: 100%;
+  }
+  .productivity .quote_block {
     max-width: 100%;
   }
   .productivity .ilus2 {
@@ -333,6 +353,12 @@ button {
 }
 
 .early_access .email input {
+  min-width: 10rem;
+  width: 100%;
+}
+
+.early_access .email button {
+  min-width: 10rem;
   width: 100%;
 }
 
@@ -344,7 +370,7 @@ button {
   padding-right: 3rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .early_access {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -352,7 +378,7 @@ button {
             flex-direction: column;
   }
   .early_access .email {
-    width: 90%;
+    width: 100%;
   }
   .early_access .email input {
     width: 100%;
@@ -455,7 +481,7 @@ button {
   height: 1rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .footer .columns {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -469,5 +495,9 @@ button {
   .footer .columns .contacts {
     padding-left: 0px;
   }
+}
+
+footer {
+  margin: 40px;
 }
 /*# sourceMappingURL=main.css.map */
