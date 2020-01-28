@@ -51,6 +51,18 @@ a {
   padding-left: 4em;
 }
 
+@media (max-width: 600px) {
+  .header .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header .menu li {
+    padding-left: 0px;
+  }
+}
+
 h1,
 h2 {
   font-family: "Raleway", sans-serif;
@@ -89,44 +101,6 @@ button {
   width: 112%;
 }
 
-@media (max-width: 600px) {
-  .files {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .files .image {
-    width: 100%;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .files .image img {
-    max-width: none;
-    width: none;
-  }
-  .files .email {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    widows: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .files .email .leave_email {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .files .email button {
-    margin: 0;
-  }
-}
-
 .files {
   max-width: 90%;
   padding-top: 50px;
@@ -142,18 +116,11 @@ button {
 }
 
 .files .image {
-  max-width: 100%;
-  width: 50%;
-  margin-left: auto;
-  -webkit-box-ordinal-group: 7;
-      -ms-flex-order: 6;
-          order: 6;
-  float: right;
+  max-width: 50%;
 }
 
 .files .image img {
   max-width: 100%;
-  max-height: 100%;
 }
 
 .files .email {
@@ -174,13 +141,54 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   -ms-flex-line-pack: stretch;
       align-content: stretch;
+}
+
+@media (max-width: 600px) {
+  .files {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .files .image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    float: left;
+    width: 90vw;
+  }
+  .files .image img {
+    max-width: none;
+    width: 80vw;
+  }
+  .files .email {
+    width: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  .files .email .leave_email {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .files .email .leave_email .get_started {
+    margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .files .email button {
+    margin: 0;
+  }
 }
 
 .productivity_wrapper {
@@ -213,20 +221,16 @@ button {
 }
 
 .productivity .ilus2 {
-  float: right;
   max-width: 50%;
 }
 
 .productivity .text_block {
   max-width: 50%;
-  float: left;
 }
 
 .productivity img {
   display: block;
-  width: 40%;
-  max-height: 600px;
-  max-width: 600px;
+  width: 50%;
 }
 
 .productivity .quote_block {
@@ -278,6 +282,25 @@ button {
   font-weight: 700;
 }
 
+@media (max-width: 600px) {
+  .productivity {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .productivity .text_block {
+    max-width: 100%;
+  }
+  .productivity .ilus2 {
+    max-width: 100%;
+    width: 100%;
+  }
+  .productivity .ilus2 img {
+    max-width: 100%;
+  }
+}
+
 .early_access {
   color: white;
   background-color: #585989;
@@ -290,16 +313,13 @@ button {
 }
 
 .early_access .text {
-  width: 50%;
-}
-
-.early_access .text {
   padding-right: 2rem;
 }
 
 .early_access .email {
   width: 50%;
-  float: right;
+  padding-right: 2rem;
+  padding-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,6 +334,33 @@ button {
 
 .early_access .email input {
   width: 100%;
+}
+
+.early_access .get_started {
+  margin-top: 1rem;
+  margin-left: 0rem;
+  padding: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+@media (max-width: 600px) {
+  .early_access {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .early_access .email {
+    width: 90%;
+  }
+  .early_access .email input {
+    width: 100%;
+    padding: 1.5rem 1rem;
+  }
+  .early_access .get_started {
+    padding: 1.5rem 2rem;
+  }
 }
 
 .clearfix:before,
@@ -377,6 +424,7 @@ button {
 
 .footer .columns .contacts {
   margin-top: 1rem;
+  padding-left: 1.5rem;
 }
 
 .footer .columns .icons {
@@ -403,8 +451,23 @@ button {
 }
 
 .footer .columns img {
-  padding-left: 1.5rem;
   width: 1rem;
   height: 1rem;
+}
+
+@media (max-width: 600px) {
+  .footer .columns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .columns .column {
+    width: 100%;
+    float: left;
+  }
+  .footer .columns .contacts {
+    padding-left: 0px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

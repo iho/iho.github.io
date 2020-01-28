@@ -22,9 +22,11 @@ body {
     display: flex;
     flex-direction: column;
 }
-a{
+
+a {
     text-decoration: none;
 }
+
 
 .header {
     display: flex;
@@ -33,7 +35,7 @@ a{
     margin-left: 2rem;
     margin-right: 2rem;
 
-    a{
+    a {
         color: black;
     }
 
@@ -48,6 +50,20 @@ a{
             padding-left: 4em;
         }
     }
+}
+
+@media (max-width: 600px) {
+    .header {
+
+        .menu {
+            flex-direction: column;
+
+            li {
+                padding-left: 0px;
+            }
+        }
+    }
+
 }
 
 h1,
@@ -66,9 +82,8 @@ input {
     padding: 20px;
     outline: none;
 }
-input:active {
 
-}
+input:active {}
 
 button {
     padding: 10px;
@@ -90,30 +105,7 @@ button {
     width: 112%;
 }
 
-@media (max-width: 600px) {
-    .files {
-        .image{
-            width: 100%;
-            order: 1;
-            img{
-                max-width: none;
-                width: none;
-            }
-        }
-        flex-direction: column;
-        .email {
-            order:1;
-            widows: 100%;
-            flex-direction: column;
-            .leave_email{
-                flex-direction: column;
-            }
-            button{
-                margin: 0;
-            }
-        }
-    }
-}
+
 
 .files {
     max-width: $container-width;
@@ -122,19 +114,14 @@ button {
     flex-direction: row;
     margin-left: 2rem;
     margin-right: 2rem;
-    .image{
-        max-width: 100%;
-        width: 50%;
-        margin-left: auto;
-        order: 6;
-        float: right;
+
+    .image {
+        max-width: 50%;
+
         img {
             max-width: 100%;
-            max-height: 100%;
         }
     }
-
-    
 
     .email {
         width: 50%;
@@ -145,9 +132,45 @@ button {
 
     .leave_email {
         display: flex;
-        width: 100%;
         flex-direction: row;
         align-content: stretch;
+    }
+}
+
+@media (max-width: 600px) {
+    .files {
+        .image {
+            order: 1;
+            float: left;
+            width: 90vw;
+
+            img {
+                max-width: none;
+                width: 80vw;
+            }
+        }
+
+        flex-direction: column-reverse;
+
+        .email {
+            width: 90%;
+            flex-direction: column;
+            margin-bottom: 1rem;
+
+            .leave_email {
+                flex-direction: column;
+
+                .get_started {
+                    margin: 0;
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                }
+            }
+
+            button {
+                margin: 0;
+            }
+        }
     }
 }
 
@@ -176,20 +199,18 @@ button {
             margin-left: auto;
         }
     }
-    .ilus2{
-        float: right;
+
+    .ilus2 {
         max-width: 50%;
     }
-    .text_block{
+
+    .text_block {
         max-width: 50%;
-        float: left;
     }
 
     img {
         display: block;
-        width: 40%;
-        max-height: 600px;
-        max-width: 600px;
+        width: 50%;
     }
 
     .quote_block {
@@ -235,6 +256,25 @@ button {
     }
 }
 
+@media (max-width: 600px) {
+    .productivity {
+        flex-direction: column-reverse;
+        .text_block{
+            max-width: 100%;
+        }
+
+        .ilus2 {
+            max-width: 100%;
+            width: 100%;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    
+    }
+}
+
 .early_access {
     color: white;
     background-color: $desaturated_blue;
@@ -244,18 +284,16 @@ button {
     padding-top: 7rem;
     display: flex;
 
-    .text {
-        width: 50%;
-    }
+    .text {}
 
     .text {
-        
         padding-right: 2rem;
     }
 
     .email {
         width: 50%;
-        float: right;
+        padding-right: 2rem;
+        padding-top: 2rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -267,25 +305,48 @@ button {
     }
 
     .get_started {
-        // margin-top: 1rem;
-        // margin-left: 0rem;
-        // padding: 1rem;
-        // padding-left: 3rem;
-        // padding-right: 3rem;
+        margin-top: 1rem;
+        margin-left: 0rem;
+        padding: 1rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 }
+
+@media (max-width: 600px) {
+
+    .early_access {
+        flex-direction: column;
+
+        // display: block;
+        .email {
+            width: 90%;
+
+            input {
+                // min-width: 10rem;
+                width: 100%;
+                padding: 1.5rem 1rem;
+            }
+        }
+
+        .get_started {
+            padding: 1.5rem 2rem;
+        }
+    }
+}
+
 .clearfix:before,
 .clearfix:after {
-  content: " ";
-  display: table;
+    content: " ";
+    display: table;
 }
 
 .clearfix:after {
-  clear: both;
+    clear: both;
 }
 
 .clearfix {
-  *zoom: 1;
+    *zoom: 1;
 }
 
 .footer {
@@ -302,7 +363,8 @@ button {
     ul {
         list-style: none;
     }
-    a{
+
+    a {
         text-decoration: none;
         color: white;
     }
@@ -321,7 +383,9 @@ button {
     .columns {
         .contacts {
             margin-top: 1rem;
+            padding-left: 1.5rem;
         }
+
 
         .icons {
             margin-top: 1rem;
@@ -348,10 +412,27 @@ button {
         }
 
         img {
-            padding-left: 1.5rem;
             width: 1rem;
             height: 1rem;
         }
     }
 
+}
+
+@media (max-width: 600px) {
+    .footer {
+        .columns {
+            flex-direction: column;
+
+            .column {
+                width: 100%;
+                float: left;
+            }
+
+            .contacts {
+                padding-left: 0px;
+            }
+
+        }
+    }
 }
