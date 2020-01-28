@@ -14,6 +14,10 @@ body {
           flex-direction: column;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,6 +26,10 @@ body {
   margin-top: 2rem;
   margin-left: 2rem;
   margin-right: 2rem;
+}
+
+.header a {
+  color: black;
 }
 
 .header .menu {
@@ -52,10 +60,12 @@ h2 {
 input {
   width: 100%;
   max-width: 20em;
-  color: white;
+  color: black;
+  outline-style: none;
   border: 1px solid black;
   border-radius: 5px;
   padding: 20px;
+  outline: none;
 }
 
 button {
@@ -79,6 +89,44 @@ button {
   width: 112%;
 }
 
+@media (max-width: 600px) {
+  .files {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .files .image {
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .files .image img {
+    max-width: none;
+    width: none;
+  }
+  .files .email {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    widows: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .files .email .leave_email {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .files .email button {
+    margin: 0;
+  }
+}
+
 .files {
   max-width: 90%;
   padding-top: 50px;
@@ -93,12 +141,23 @@ button {
   margin-right: 2rem;
 }
 
-.files img {
-  display: block;
-  max-width: 30rem;
+.files .image {
+  max-width: 100%;
+  width: 50%;
+  margin-left: auto;
+  -webkit-box-ordinal-group: 7;
+      -ms-flex-order: 6;
+          order: 6;
+  float: right;
+}
+
+.files .image img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .files .email {
+  width: 50%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -126,6 +185,7 @@ button {
 
 .productivity_wrapper {
   background-color: #f6f6fe;
+  padding-bottom: 5rem;
 }
 
 .productivity {
@@ -150,6 +210,16 @@ button {
   display: inline-block;
   height: 1rem;
   margin-left: auto;
+}
+
+.productivity .ilus2 {
+  float: right;
+  max-width: 50%;
+}
+
+.productivity .text_block {
+  max-width: 50%;
+  float: left;
 }
 
 .productivity img {
@@ -219,16 +289,17 @@ button {
   display: flex;
 }
 
-.early_access .email .text {
-  width: 100%;
+.early_access .text {
+  width: 50%;
 }
 
 .early_access .text {
-  max-width: 40rem;
   padding-right: 2rem;
 }
 
 .early_access .email {
+  width: 50%;
+  float: right;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -242,16 +313,21 @@ button {
 }
 
 .early_access .email input {
-  min-width: 10rem;
   width: 100%;
 }
 
-.early_access .get_started {
-  margin-top: 1rem;
-  margin-left: 0rem;
-  padding: 1rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
 }
 
 .footer {
@@ -271,6 +347,11 @@ button {
 
 .footer ul {
   list-style: none;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
 }
 
 .footer .logo {

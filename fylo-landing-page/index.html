@@ -34,17 +34,21 @@
         <a href="/"> <img src="images/logo.svg" /> </a>
         <ul class="menu">
           <li>
-            Features
+            <a href="#">Features</a>
           </li>
           <li>
-            Team
+            <a href="#">Team</a>
           </li>
           <li>
-            Sign In
+            <a href="#">Sign In</a>
           </li>
         </ul>
       </div>
-      <div class="files">
+      <div class="files clearfix">
+        <div class="image">
+          <img src="images/illustration-1.svg" />
+        </div>
+
         <div class="email">
           <h1>All your files in one secure location, accessible anywhere.</h1>
 
@@ -53,18 +57,18 @@
             them wherever you need, share and collaborate with friends, family,
             and co-workers.
           </p>
-          <div class="leave_email">
+
+          <form action="#" method="get" class="leave_email">
             <input
               placeholder="Enter your email..."
-              type="text"
+              type="email"
               class="email"
             />
-            <button class="get_started">Get Started</button>
-          </div>
+            <button type="submit" class="get_started">Get Started</button>
+          </form>
         </div>
-        <img src="images/illustration-1.svg" />
       </div>
-      <div class="line">1</div>
+      <div class="line"></div>
       <div class="productivity_wrapper">
         <div class="productivity">
           <div class="text_block">
@@ -97,10 +101,10 @@
               </div>
             </div>
           </div>
-          <img src="images/illustration-2.svg" />
+          <img class="ilus2" src="images/illustration-2.svg" />
         </div>
       </div>
-      <div class="early_access">
+      <div class="early_access clearfix">
         <div class="text">
           <h2>Get early access today</h2>
           <p>
@@ -110,53 +114,69 @@
           </p>
         </div>
         <div class="email">
-          <input type="email" class="email" placeholder="email@example.com" />
-          <button class="get_started">Get Started For Free</button>
+          <form method="get" action=".">
+            <input type="email" class="email_input" placeholder="email@example.com" />
+            <button class="get_started">Get Started For Free</button>
+          </form>
         </div>
       </div>
       <div class="footer">
         <img class="logo" src="images/logo-white.svg" />
         <div class="columns">
           <div class="column contacts">
-          <div>
-            <div class="phone">
-              <img src="images/icon-phone.svg" />
-              Phone: +1-543-123-4567
+            <div>
+              <div class="phone">
+                <img src="images/icon-phone.svg" />
+                <a href="tel:+1-543-123-4567">Phone: +1-543-123-4567</a>
+              </div>
+              <div class="email">
+                <img src="images/icon-email.svg" />
+                <a href="mailto:example@fylo.com">example@fylo.com</a>
+              </div>
             </div>
-            <div class="email">
-              <img src="images/icon-email.svg" />
-              example@fylo.com
-            </div>
-          </div>
-            
           </div>
           <div class="column">
             <ul>
               <li>
-                About Us
+                <a href="#">
+                  About Us
+                </a>
               </li>
               <li>
-                Jobs
+                <a href="#">
+                  Jobs
+                </a>
               </li>
               <li>
-                Press
+                <a href="#">
+                  Press
+                </a>
               </li>
               <li>
-                Blog
+                <a href="#">
+                  Blog
+                </a>
               </li>
             </ul>
           </div>
           <div class="column">
             <ul>
-            <li>Contact Us
-            </li>
-            <li>
-              Terms
-            </li>
-            <li>
-              Privacy
-            </li>
-          </ul>
+              <li>
+                <a href="#">
+                  Contact Us
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Terms
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Privacy
+                </a>
+              </li>
+            </ul>
           </div>
 
           <div class="column icons">

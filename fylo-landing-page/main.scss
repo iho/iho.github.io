@@ -22,6 +22,9 @@ body {
     display: flex;
     flex-direction: column;
 }
+a{
+    text-decoration: none;
+}
 
 .header {
     display: flex;
@@ -29,7 +32,10 @@ body {
     margin-top: 2rem;
     margin-left: 2rem;
     margin-right: 2rem;
-    
+
+    a{
+        color: black;
+    }
 
     .menu {
         list-style: none;
@@ -53,10 +59,15 @@ h2 {
 input {
     width: 100%;
     max-width: 20em;
-    color: white;
+    color: black;
+    outline-style: none;
     border: 1px solid black;
     border-radius: 5px;
     padding: 20px;
+    outline: none;
+}
+input:active {
+
 }
 
 button {
@@ -78,6 +89,32 @@ button {
     height: 200px;
     width: 112%;
 }
+
+@media (max-width: 600px) {
+    .files {
+        .image{
+            width: 100%;
+            order: 1;
+            img{
+                max-width: none;
+                width: none;
+            }
+        }
+        flex-direction: column;
+        .email {
+            order:1;
+            widows: 100%;
+            flex-direction: column;
+            .leave_email{
+                flex-direction: column;
+            }
+            button{
+                margin: 0;
+            }
+        }
+    }
+}
+
 .files {
     max-width: $container-width;
     padding-top: 50px;
@@ -85,17 +122,25 @@ button {
     flex-direction: row;
     margin-left: 2rem;
     margin-right: 2rem;
-
-    img {
-        display: block;
-        max-width: 30rem;
+    .image{
+        max-width: 100%;
+        width: 50%;
+        margin-left: auto;
+        order: 6;
+        float: right;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
     }
 
+    
+
     .email {
+        width: 50%;
         justify-content: center;
         display: flex;
         flex-direction: column;
-
     }
 
     .leave_email {
@@ -103,13 +148,14 @@ button {
         width: 100%;
         flex-direction: row;
         align-content: stretch;
-
-        
     }
 }
-.productivity_wrapper{
+
+.productivity_wrapper {
     background-color: $light_grayish_blue;
+    padding-bottom: 5rem;
 }
+
 .productivity {
     max-width: $container-width;
     background-color: $light_grayish_blue;
@@ -130,6 +176,14 @@ button {
             margin-left: auto;
         }
     }
+    .ilus2{
+        float: right;
+        max-width: 50%;
+    }
+    .text_block{
+        max-width: 50%;
+        float: left;
+    }
 
     img {
         display: block;
@@ -139,11 +193,12 @@ button {
     }
 
     .quote_block {
-        .quote{
+        .quote {
             padding-left: 1.5rem;
             padding-right: 1.5rem;
 
         }
+
         .quotes_image {
             padding-left: 1.5rem;
             width: 1rem;
@@ -162,7 +217,8 @@ button {
         .author_block {
             display: flex;
             padding: 1rem;
-            img{
+
+            img {
                 border-radius: 50%;
                 padding-right: 0.5rem;
             }
@@ -170,6 +226,7 @@ button {
             .author_data {
                 display: flex;
                 flex-direction: column;
+
                 .name {
                     font-weight: 700;
                 }
@@ -187,31 +244,51 @@ button {
     padding-top: 7rem;
     display: flex;
 
-    .email .text{
-        width: 100%;
+    .text {
+        width: 50%;
     }
-    .text{
-        max-width: 40rem;
+
+    .text {
+        
         padding-right: 2rem;
     }
-    .email{
+
+    .email {
+        width: 50%;
+        float: right;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        input{
-            min-width: 10rem;
+
+        input {
+            // min-width: 10rem;
             width: 100%;
         }
     }
-    .get_started{
-        margin-top: 1rem;
-        margin-left: 0rem;
-        padding: 1rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
+
+    .get_started {
+        // margin-top: 1rem;
+        // margin-left: 0rem;
+        // padding: 1rem;
+        // padding-left: 3rem;
+        // padding-right: 3rem;
     }
 }
-.footer{
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.footer {
     color: white;
     background-color: $very_dark_blue;
 
@@ -221,47 +298,60 @@ button {
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    ul{
+
+    ul {
         list-style: none;
     }
-    .logo{
+    a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .logo {
         width: 200px;
         padding: 2rem;
     }
-    .contacts{
-        img{
+
+    .contacts {
+        img {
             padding-right: 1rem;
         }
     }
-    .columns{
-        .contacts{
+
+    .columns {
+        .contacts {
             margin-top: 1rem;
         }
-        .icons{
+
+        .icons {
             margin-top: 1rem;
         }
+
         display: flex;
         flex-direction: row;
         padding-bottom: 1rem;
         padding-top: 0px;
-        ul{
+
+        ul {
             padding: 0px;
         }
-        .column{
+
+        .column {
             width: 25%;
             display: flex;
             flex-direction: column;
-            
+
         }
-        
-        li{
+
+        li {
             padding-bottom: 1rem;
         }
+
         img {
             padding-left: 1.5rem;
             width: 1rem;
             height: 1rem;
         }
     }
-   
+
 }
