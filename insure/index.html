@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Insure landing page</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Serif+Display|Karla&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <img class="logo" src="images/logo.svg" alt="Logo" />
+      <img id="close" src="images/icon-close.svg" />
+      <img id="show" src="images/icon-hamburger.svg" />
+    </div>
+    <div id="menu" class="menu">
+      <ul>
+        <li>
+          <a href="/work">How we work </a>
+        </li>
+        <li>
+          <a href="/blog">Blog</a>
+        </li>
+        <li>
+          <a href="/account">Account</a>
+        </li>
+        <li>
+          <a href="/view">View plans</a>
+        </li>
+      </ul>
+    </div>
+    <script>
+      let menu = document.querySelector("#menu");
+      let show = document.querySelector("#show");
+      let close = document.querySelector("#close");
+      show.addEventListener("click", e => {
+        e.preventDefault();
+        menu.style.display = "block";
+        close.style.display = "inline-block";
+        show.style.display = "none";
+      });
+      close.addEventListener("click", e => {
+        e.preventDefault();
+        menu.style.display = "none";
+        close.style.display = "none";
+        show.style.display = "inline-block";
+      });
+    </script>
+    <img src="images/image-intro-mobile.jpg" class="into_img">
+    <div class="humanizing">
+      <h1>Humanizing your insurance.</h1>
+      <p>
+        Get your life insurance coverage easier and faster. We blend our
+        expertise and technology to help you find the plan that’s right for you.
+        Ensure you and your loved ones are protected.
+      </p>
+      <a href="#"> <button>View plans</button> </a>
+    </div>
+    
+    <div class="pros">
+      <img class="r-img" src="images/bg-pattern-intro-right-mobile.svg">
+      <hr>
+      <h2>We’re different</h2>
+      <img src="images/icon-snappy-process.svg" />
+      <h3>Snappy Process</h3>
+      <p>
+        Our application process can be completed in minutes, not hours. Don’t
+        get stuck filling in tedious forms.
+      </p>
+      <img src="images/icon-affordable-prices.svg" />
+      <h3>Affordable Prices</h3>
+      <p>
+        We don’t want you worrying about high monthly costs. Our prices may be
+        low, but we still offer the best coverage possible.
+      </p>
+      <img src="images/icon-people-first.svg" />
+      <h3>People First</h3>
+      <p>
+        Our plans aren’t full of conditions and clauses to prevent payouts. We
+        make sure you’re covered when you need it.
+      </p>
+    </div>
+
+    <div class="how-work">
+      <h2>Find out more about how we work</h2>
+      <a href="/work"> <button>How we work</button> </a>
+    </div>
+    <div class="icons">
+      <img src="images/logo.svg" alt="logo" />
+      <div class="small">
+        <a href="#"><img src="images/icon-facebook.svg" alt="Facebook"/></a>
+        <a href="#"><img src="images/icon-twitter.svg" alt="Twitter"/></a>
+        <a href="#"><img src="images/icon-pinterest.svg" alt="Pinterest"/></a>
+        <a href="#"><img src="images/icon-instagram.svg" alt="Instagram"/></a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <hr>
+      <div class="column">
+        <div class="title">Our company</div>
+        <a href="#">How we work</a>
+        <a href="#">Why Insure? </a>
+        <a href="#">View plans</a>
+        <a href="#">Reviews</a>
+      </div>
+      <div class="column">
+        <div class="title">Help me</div>
+        <a href="#">FAQ</a>
+        <a href="#">Terms of use</a>
+        <a href="#">Privacy policy</a>
+        <a href="#">Cookies</a>
+      </div>
+      <div class="column">
+        <div class="title">Contact</div>
+        <a href="#">Sales</a>
+        <a href="#">Support </a>
+        <a href="#">Live chat</a>
+      </div>
+      <div class="column">
+        <div class="title">
+          Others
+        </div>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+        <a href="#">Licenses</a>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
