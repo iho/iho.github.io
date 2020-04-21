@@ -3,17 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://ihor.horobets.me/posts/my-first-post/</loc>
-    <lastmod>2020-04-21T11:41:53+03:00</lastmod>
+    <loc>http://ihor.horobets.me/posts/golang-setup/</loc>
+    <lastmod>2020-04-21T19:29:25+03:00</lastmod>
   </url>
   
   <url>
     <loc>http://ihor.horobets.me/</loc>
-    <lastmod>2020-04-21T11:41:53+03:00</lastmod>
+    <lastmod>2020-04-21T19:29:25+03:00</lastmod>
   </url>
   
   <url>
     <loc>http://ihor.horobets.me/posts/</loc>
+    <lastmod>2020-04-21T19:29:25+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://ihor.horobets.me/posts/my-first-post/</loc>
     <lastmod>2020-04-21T11:41:53+03:00</lastmod>
   </url>
   

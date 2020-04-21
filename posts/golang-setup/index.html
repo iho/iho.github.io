@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Golang Setup &middot; My New Hugo Blog</title>
+
+		
+  		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/fonts.css">
+		
+		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+		
+		<link href="" rel="alternate" type="application/rss+xml" title="My New Hugo Blog" />
+	</head>
+
+    <body>
+        		<nav class="nav">
+			<div class="nav-container">
+				<a href="/">
+					<h2 class="nav-title">My New Hugo Blog</h2>
+				</a>
+				<ul>
+    
+    
+</ul>
+			</div>
+		</nav>
+
+        
+
+<main>
+	<div class="post">
+		<div class="post-info">
+    <span>Written by</span>
+        
+        <br>
+        <span>on&nbsp;</span><time datetime="2020-04-21 19:29:25 &#43;0300 EEST">April 21, 2020</time>
+</div>
+		<h1 class="post-title">Golang Setup</h1>
+<div class="post-line"></div>
+
+		
+
+		<p>По дефолту Goland не автоформатує файли при збережені як це роблять інші редактори коду. Принаймі є шорткат щоб це зробити самостійно: <code>Ctrl+Shift+Alt+f</code></p>
+<p>Go має гороші тулзи і я постійно забуваю як налаштовувавти Goland тому збережу це тут:</p>
+<ol>
+<li>потрібно встановити бінарник GolangCI Lint</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b <span style="color:#66d9ef">$(</span>go env GOPATH<span style="color:#66d9ef">)</span>/bin v1.24.0
+</code></pre></div><ol start="2">
+<li>додати файлвотчери для <code>goimports</code> та <code>golanci-lint</code>:
+<img src="/img/goland.png" alt="alt text" title="Logo Title Text 1"></li>
+</ol>
+<p>Для <code>golanci-lint</code> має сенс додати певні опції для більш розширеного виводу:</p>
+<p><code>run --disable=typecheck $FileDir$ --enable=golint --enable=maligned --enable=prealloc --enable=goconst</code></p>
+
+
+		
+	</div>
+
+	<div class="pagination">
+		<a href="/posts/my-first-post/" class="left arrow">&#8592;</a>
+
+		<a href="#" class="top">Top</a>
+	</div>
+</main>
+
+
+        		<footer>
+			<span>
+			&copy; <time datetime="2020-04-21 19:47:58.501974561 &#43;0300 EEST m=&#43;0.053291048">2020</time> . Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			</span>
+		</footer>
+
+    </body>
+</html>
