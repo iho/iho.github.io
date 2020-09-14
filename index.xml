@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Blog</title>
+    <link>http://ihor.horobets.me/</link>
+    <description>Recent content on My New Hugo Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Apr 2020 22:28:34 +0300</lastBuildDate>
+    
+	<atom:link href="http://ihor.horobets.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Go Optimizations</title>
+      <link>http://ihor.horobets.me/posts/go-optimizations/</link>
+      <pubDate>Mon, 27 Apr 2020 22:28:34 +0300</pubDate>
+      
+      <guid>http://ihor.horobets.me/posts/go-optimizations/</guid>
+      <description>Написання та оптимізація Go коду Цей документ встановлює найкращі практики для написання високо-швидкісного Go коду.
+Хоча буде згадуватися як зробити певні сервіси швидше (кешування і так далі), дизайн швидких розподілених систем поза цією роботою. Вже існують хороші тексти про моніторинг та дизайн розподілених систем. Оптимізація розподілених систем охоплює зовсім інший набір досліджень та компроміси в дизайні.
+Весь контент опубліковано під ліценхією CC-BY-SA.
+Ця книжка розбита на різні секції:
+ Базові поради для написання не повільного софту  речі рівня CS 101   Поради для написання швидкого софту  специфічні для Go секції як отримати максимум з Go   Продвинуті поради для написання справді швидкого софту  для випадків коли Ваш код оптимізовано не достатньо    Ми можемо підсумувати ці три секції як:</description>
+    </item>
+    
+    <item>
+      <title>Golang Setup</title>
+      <link>http://ihor.horobets.me/posts/golang-setup/</link>
+      <pubDate>Tue, 21 Apr 2020 19:29:25 +0300</pubDate>
+      
+      <guid>http://ihor.horobets.me/posts/golang-setup/</guid>
+      <description>По дефолту Goland не автоформатує файли при збережені як це роблять інші редактори коду. Принаймі є шорткат щоб це зробити самостійно: Ctrl+Shift+Alt+f
+Go має хороші тулзи і я постійно забуваю як налаштовувавти Goland тому збережу це тут:
+ потрібно встановити бінарник GolangCI Lint  curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.24.0 додати файлвотчери для goimports та golanci-lint:   Для golanci-lint має сенс додати певні опції для більш розширеного виводу:</description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>http://ihor.horobets.me/posts/my-first-post/</link>
+      <pubDate>Tue, 21 Apr 2020 11:41:53 +0300</pubDate>
+      
+      <guid>http://ihor.horobets.me/posts/my-first-post/</guid>
+      <description>Hello world!</description>
+    </item>
+    
+  </channel>
+</rss>
